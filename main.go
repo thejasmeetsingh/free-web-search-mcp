@@ -7,7 +7,6 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
-	"strings"
 	"time"
 
 	"github.com/modelcontextprotocol/go-sdk/mcp"
@@ -26,15 +25,9 @@ func main() {
 	// stdout belongs to the MCP protocol in stdio mode, so log to stderr only.
 	log.SetOutput(os.Stderr)
 
-	// Retrieve the active version
-	version, err := os.ReadFile("VERSION")
-	if err != nil {
-		log.Fatalf("server error: %v", err)
-	}
-
 	server := mcp.NewServer(&mcp.Implementation{
-		Name:    "free-web-search-mcp",
-		Version: strings.Trim(string(version), " "),
+		Name:        "free-web-search-mcp",
+		Description: "Lightweight, cost-free web search MCP for AI assistants.",
 	}, nil)
 
 	// Initialize tools cache
