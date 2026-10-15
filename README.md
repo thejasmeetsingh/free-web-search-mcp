@@ -101,20 +101,6 @@ The MCP endpoint is then available at `http://127.0.0.1:8080/mcp`.
 - "Find three articles about MCP servers, then fetch the most relevant one and give me the key points."
 - "Fetch https://example.com/blog/post and turn it into bullet-point notes."
 
-## Project structure
-
-```
-.
-├── main.go        # Server setup, tool registration, flags, transport selection
-├── search.go      # web_search: DuckDuckGo scraping and result parsing
-├── fetch.go       # web_fetch: HTTP fetching, SSRF guard, Markdown conversion
-├── cache.go       # Generic in-memory TTL + LRU cache
-├── cache_test.go
-├── LICENSE
-├── go.mod
-└── go.sum
-```
-
 ## How it works
 
 **Search.** The server sends the query to DuckDuckGo's HTML endpoint, parses the result list with [goquery](https://github.com/PuerkitoBio/goquery), and unwraps DuckDuckGo's redirect links to return the real destination URLs.
