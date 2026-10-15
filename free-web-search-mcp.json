@@ -1,0 +1,22 @@
+{
+    "version": "0.1.0",
+    "architecture": {
+        "64bit": {
+            "url": "https://github.com/thejasmeetsingh/free-web-search-mcp/releases/download/v0.1.0/free-web-search-mcp_0.1.0_Windows_x86_64.zip",
+            "bin": [
+                "free-web-search-mcp.exe"
+            ],
+            "hash": "56978a4ed58f499f2fbcd6518855cb3f371f695eb431617d93e17a484ea85eea"
+        },
+        "arm64": {
+            "url": "https://github.com/thejasmeetsingh/free-web-search-mcp/releases/download/v0.1.0/free-web-search-mcp_0.1.0_Windows_arm64.zip",
+            "bin": [
+                "free-web-search-mcp.exe"
+            ],
+            "hash": "81e52d4ade99caf73eb1be669a314d118511e7e33cef9ca7a1fb9c2ad9b1876e"
+        }
+    },
+    "homepage": "https://github.com/thejasmeetsingh/free-web-search-mcp",
+    "license": "MIT",
+    "description": "Lightweight, cost-free web search MCP for AI assistants."
+}
